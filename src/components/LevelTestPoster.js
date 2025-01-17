@@ -120,9 +120,9 @@ const LevelTestPoster = () => {
 						<Wallet className="text-blue-600" size={24} />
 						<h2 className="text-xl font-bold text-blue-800">결제 정보</h2>
 					</div>
-					<div className="flex items-center justify-center gap-4">
+					<div className="flex flex-col items-center gap-4">
 						<img src="/qr-code.jpeg" alt="QR Code" className="w-32 h-32" />
-						<div className="bg-gray-50 p-4 rounded-lg break-all font-mono text-sm flex-1 flex items-center justify-between min-h-[8rem] group">
+						<div className="bg-gray-50 p-4 rounded-lg break-all font-mono text-sm w-full flex items-center justify-between min-h-[8rem] group">
 							<span className="text-gray-900">{walletAddress}</span>
 							{copyButton}
 						</div>
