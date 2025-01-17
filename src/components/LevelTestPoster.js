@@ -134,137 +134,137 @@ const LevelTestPoster = () => {
 				결제 방법 안내
 			</h2>
 
-			<div className="grid gap-6 md:grid-cols-1">
-				{/* Step 1 */}
-				<div className="bg-white rounded-lg shadow-md overflow-hidden">
-					<div className="p-6">
-						<div className="flex items-center gap-2 mb-4">
-							<Download className="w-5 h-5" />
-							<h3 className="text-xl font-semibold">
-								1단계: Phantom 지갑 설치
-							</h3>
+			{/* Step 1 */}
+			<div className="bg-white rounded-lg shadow-md overflow-hidden">
+				<div className="p-6">
+					<div className="flex items-center gap-2 mb-4">
+						<Download className="w-5 h-5" />
+						<h3 className="text-xl font-semibold">
+							1단계: Phantom 지갑 설치하기
+						</h3>
+					</div>
+					<div className="space-y-2">
+						<p>
+							• Chrome 웹 스토어에서 'Phantom' 지갑 확장 프로그램을 검색하거나{" "}
+							<a
+								href="https://phantom.app"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-blue-600 hover:text-blue-800 underline"
+							>
+								phantom.app
+							</a>
+							을 방문하여 설치하실 수 있습니다
+						</p>
+						<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
+							<img
+								src="/phantom-install.png"
+								alt="Phantom 설치 화면"
+								className="w-full h-auto object-cover"
+							/>
 						</div>
-						<div className="space-y-2">
-							<p>
-								• Chrome 웹 스토어에서 'Phantom' 지갑 확장 프로그램을 검색하거나{" "}
-								<a
-									href="https://phantom.app"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-blue-600 hover:text-blue-800 underline"
-								>
-									phantom.app
-								</a>
-								에서 다운로드하세요
-							</p>
-							<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
-								<img
-									src="/phantom-install.png"
-									alt="Phantom 설치 화면"
-									className="w-full h-auto object-cover"
-								/>
-							</div>
-							<p>
-								• 공식 Phantom 확장 프로그램을 설치하세요 (verified 마크 확인
-								필수)
-							</p>
-						</div>
+						<p>
+							• 반드시 공식 Phantom 확장 프로그램인지 확인해 주세요 (인증 마크
+							확인 필수)
+						</p>
 					</div>
 				</div>
+			</div>
 
-				{/* Step 2 */}
-				<div className="bg-white rounded-lg shadow-md overflow-hidden">
-					<div className="p-6">
-						<div className="flex items-center gap-2 mb-4">
-							<Wallet className="w-5 h-5" />
-							<h3 className="text-xl font-semibold">2단계: 지갑 설정</h3>
-						</div>
-						<div className="space-y-2">
-							<p>
-								• 기존 지갑 복구를 선택하세. Key는 24개 입력란으로 전환 후
-								입력하세요
-							</p>
-							<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
-								<img
-									src="/recover-wallet.png"
-									alt="지갑 복구 화면"
-									className="w-full h-auto object-cover"
-								/>
-							</div>
-							<p>• select the option for Add a secret phrase</p>
-							<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
-								<img
-									src="/secret-phrase.png"
-									alt="지갑 복구 화면"
-									className="w-full h-auto object-cover"
-								/>
-								<img
-									src="/24keys.png"
-									alt="지갑 복구 화면"
-									className="w-full h-auto object-cover"
-								/>
-							</div>
-							<p>• 안전한 비밀번호를 설정하세요</p>
+			{/* Step 2 */}
+			<div className="bg-white rounded-lg shadow-md overflow-hidden">
+				<div className="p-6">
+					<div className="flex items-center gap-2 mb-4">
+						<Wallet className="w-5 h-5" />
+						<h3 className="text-xl font-semibold">2단계: 지갑 설정하기</h3>
+					</div>
+					<div className="space-y-2">
+						<p>
+							• '기존 지갑 복구하기'를 선택한 후, 시드구문 입력 화면에서 24개
+							단어 입력 모드로 전환해 주세요
+						</p>
+						<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
 							<img
-								src="/password.png"
+								src="/recover-wallet.png"
 								alt="지갑 복구 화면"
 								className="w-full h-auto object-cover"
 							/>
 						</div>
-					</div>
-				</div>
-
-				{/* Step 3 */}
-				<div className="bg-white rounded-lg shadow-md overflow-hidden">
-					<div className="p-6">
-						<div className="flex items-center gap-2 mb-4">
-							<Send className="w-5 h-5" />
-							<h3 className="text-xl font-semibold">3단계: 토큰 전송</h3>
-						</div>
-						<div className="space-y-2">
-							<p>1. Phantom 지갑을 키세요.</p>
+						<p>• '시드구문 입력하기' 옵션을 선택해 주세요</p>
+						<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
 							<img
-								src="/open-phantom.png"
-								alt="토큰 전송 화면"
+								src="/secret-phrase.png"
+								alt="시드구문 입력 화면"
 								className="w-full h-auto object-cover"
 							/>
-							<p>2. Phantom 지갑에서 'Send' 버튼을 클릭하세요</p>
-							<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
-								<img
-									src="/send-button.png"
-									alt="토큰 전송 화면"
-									className="w-full h-auto object-cover"
-								/>
-							</div>
-							<p>
-								3. 솔라나를 선택 후, 아래 주소를 복사하여 받는 사람 주소란에
-								입력하세요:
-							</p>
-							<div className="bg-gray-100 p-3 rounded-md mt-2 break-all">
-								<span className="text-gray-900">{walletAddress}</span>
-								{copyButton}
-							</div>
 							<img
-								src="/enter-address.png"
-								alt="토큰 전송 화면"
+								src="/24keys.png"
+								alt="24단어 입력 화면"
 								className="w-full h-auto object-cover"
 							/>
-							<p>3. 결제하실 금액을 입력하세요</p>
-							<p>4. 거래 수수료를 확인하시고 '확인'을 클릭하세요</p>
 						</div>
+						<p>• 안전한 비밀번호를 설정해 주세요</p>
+						<img
+							src="/password.png"
+							alt="비밀번호 설정 화면"
+							className="w-full h-auto object-cover"
+						/>
 					</div>
 				</div>
+			</div>
 
-				<div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-					<h3 className="font-semibold text-yellow-800 mb-2">주의사항</h3>
-					<ul className="text-yellow-700 space-y-1">
-						<li>• 송금 전 주소를 반드시 더블체크해주세요</li>
-						<li>
-							• 거래 수수료를 위해 충분한 SOL을 보유하고 있는지 확인해주세요
-						</li>
-						<li>• 지갑 비밀번호와 시드구문은 절대 타인과 공유하지 마세요</li>
-					</ul>
+			{/* Step 3 */}
+			<div className="bg-white rounded-lg shadow-md overflow-hidden">
+				<div className="p-6">
+					<div className="flex items-center gap-2 mb-4">
+						<Send className="w-5 h-5" />
+						<h3 className="text-xl font-semibold">3단계: 토큰 전송하기</h3>
+					</div>
+					<div className="space-y-2">
+						<p>1. Phantom 지갑을 실행해 주세요</p>
+						<img
+							src="/open-phantom.png"
+							alt="지갑 실행 화면"
+							className="w-full h-auto object-cover"
+						/>
+						<p>2. '보내기(Send)' 버튼을 클릭해 주세요</p>
+						<div className="my-4 bg-gray-100 rounded-lg overflow-hidden">
+							<img
+								src="/send-button.png"
+								alt="전송 버튼 화면"
+								className="w-full h-auto object-cover"
+							/>
+						</div>
+						<p>
+							3. 솔라나(SOL)를 선택하신 후, 아래 주소를 복사하여 받는 분의
+							주소란에 입력해 주세요:
+						</p>
+						<div className="bg-gray-100 p-3 rounded-md mt-2 break-all">
+							<span className="text-gray-900">{walletAddress}</span>
+							{copyButton}
+						</div>
+						<img
+							src="/enter-address.png"
+							alt="주소 입력 화면"
+							className="w-full h-auto object-cover"
+						/>
+						<p>4. 전송하실 금액을 입력해 주세요</p>
+						<p>5. 네트워크 수수료를 확인하시고 '확인' 버튼을 눌러주세요</p>
+					</div>
 				</div>
+			</div>
+
+			{/* Warning Section */}
+			<div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+				<h3 className="font-semibold text-yellow-800 mb-2">주의사항</h3>
+				<ul className="text-yellow-700 space-y-1">
+					<li>• 송금하시기 전 받는 분의 주소를 반드시 두 번 확인해 주세요</li>
+					<li>
+						• 네트워크 수수료 지불을 위해 충분한 SOL을 보유하고 계신지 확인해
+						주세요
+					</li>
+					<li>• 지갑 비밀번호와 시드구문은 절대로 타인과 공유하지 마세요</li>
+				</ul>
 			</div>
 		</div>
 	);
